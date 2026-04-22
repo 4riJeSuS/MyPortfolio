@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MyPortfolio</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700;900&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+    <div class="container">
+        <section class="panel hero">
+            <h1 class="glitch">Ari Jesus</h1>
+            <p class="subtitle">Aspiring Gameplay Programmer & Game Designer</p>
+        </section>
+
+        <section class="panel projects-carousel">
+            <div class="horizontal-track">
+
+                <div class="card profile-card" onclick="expandCard(this)">
+                    <div class="card-preview">
+                        <img src="perfil.jpg" alt="Profile"
+                            style="width: 100%; height: 100%; object-fit: cover; display: block;">
+                    </div>
+                    <div class="card-header">
+                        <h3>Who am I?</h3>
+                        <span>Bio & Skills</span>
+                    </div>
+                    <div class="card-content">
+                        <button class="close-button" onclick="closeCard(event, this)">&#10229;</button>
+                        <div class="detailed-info">
+
+                            <h4>About Me</h4>
+                            <p>
+                                I am a final-year Computer Science student with a strong interest in game
+                                development, actively working on personal projects to strengthen my
+                                gameplay programming skills, including C++, Unreal Engine, and 3D modeling.
+                                I’m a gamer who loves getting lost in immersive open worlds and fascinated by games
+                                that blur the line between reality and imagination,
+                                due to that I aim to build worlds so enganing that
+                                provoke the same feeling to other players.
+                            </p>
+
+                            <h4>Main Skills</h4>
+                            <ul>
+                                <li>C++ | Java</li>
+                                <li>Unreal Engine 5 (Bluprints & C++)</li>
+                                <li>Mathematics and Physics for Games</li>
+                                <li>Design Enthusiast</li>
+                            </ul>
+
+                            <div class="social-links">
+                                <a href="https://github.com/4riJeSuS" target="_blank"
+                                    class="social-button github">GitHub</a>
+                                <a href="https://www.linkedin.com/in/ari-jesus-341a743b6/" target="_blank"
+                                    class="social-button linkedin">LinkedIn</a>
+                            </div>
+
+                            <a href="cvAriNI2026.pdf" download class="cv-button">Download Full CV (PDF)</a>
+
+                            <div class="gif-container">
+                                <img src="cat.gif" alt="Funny Cat" class="footer-gif">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="card" onclick="expandCard(this)">
+
+                    <!-- <div class="card-preview">
+                        <video autoplay muted loop playsinline>
+                            <source src="video1.mp4" type="video/mp4">
+                        </video>
+                    </div> -->
+
+                    <div class="card-header">
+                        <div class="project-badge">Final Degree Project (In Development)</div>
+                        <h3>Out Of Balance</h3>
+                        <span>C++ | Blueprints | Unreal Engine 5</span>
+                    </div>
+
+                    <div class="card-content">
+                        <button class="close-button" onclick="closeCard(event, this)">&#10229;</button>
+                        <div class="detailed-info">
+
+                            <h4>Description</h4>
+                            <p>
+                                This project is a narrative-driven game developed in Unreal Engine,
+                                focused on exploration and environmental puzzle-solving.
+                                The player takes on the role of a character revisiting important
+                                memories, represented as interactive physical spaces.
+                                By interacting with objects and reorganizing elements within the
+                                environment, the player gradually reconstructs meaningful moments.
+                                These puzzles are not only mechanical but also narrative-driven,
+                                reflecting emotions and past experiences.
+                                The game follows a minimalist storytelling approach, relying on environment,
+                                sound, and interaction rather than explicit dialogue, encouraging
+                                player interpretation.
+                            </p>
+
+                            <div class="repo-link">
+                                <a href="https://github.com/4riJeSuS/OutOfBalance" target="_blank"
+                                    class="git-repo-button">
+                                    View Project on GitHub
+                                </a>
+                            </div>
+
+                            <h4>What I did</h4>
+                            <ul>
+                                <li>Developed object interaction system using C++</li>
+                                <li>Implemented object detection using sweep traces</li>
+                                <li>Implemented inventory system</li>
+                                <li>Developed lock-and-key systems</li>
+                                <li>Designed and implemented environmental puzzle systems</li>
+                                <li>Integrated gameplay logic with UI (Blueprints)</li>
+                                <li>Designed all narrative of the game</li>
+                            </ul>
+
+                            <h4>Technical Details</h4>
+                            <ul>
+                                <li>Developed in Unreal Engine 5</li>
+                                <li>C++ programming with Blueprint integration</li>
+                                <li>Used C++ Interface for modular interaction logic</li>
+                            </ul>
+
+                            <h4>Challenges</h4>
+                            <p>
+                                One of the biggest challenges was optimizing the sweep trace system for
+                                object detection. Initially, it caused processing spikes when many objects
+                                were close together. I solved this by implementing a culling and tag filtering
+                                system, ensuring that the engine only checked objects strictly necessary for
+                                the puzzle.
+                            </p>
+
+                            <h4>Current Roadmap</h4>
+                            <ul>
+                                <li><strong>Level Design & World Building:</strong> Expanding the modular environment
+                                    and refining the atmosphere through lighting and soundscapes.</li>
+                                <li><strong>UI/UX Framework:</strong> Developing a cohesive menu system (Main Menu,
+                                    Pause, and Inventory) using Unreal Motion Graphics (UMG) and C++ for state
+                                    management.</li>
+                                <li><strong>Advanced Mechanics:</strong> Implementing a Save/Load system to track player
+                                    progress through the narrative.</li>
+                            </ul>
+
+                            <!-- <h4>Video Demo</h4>
+                            <video controls width="100%">
+                                <source src="video1.mp4" type="video/mp4">
+                            </video> -->
+
+                        </div>
+                    </div>
+                </div>
+
+                <div class="card" onclick="expandCard(this)">
+                    <div class="card-header">
+                        <div class="project-badge">Learning Prototype</div>
+                        <h3>Physics Ball Room</h3>
+                        <span>C++ | Unreal Engine 5</span>
+                    </div>
+                    <div class="card-content">
+                        <button class="close-button" onclick="closeCard(event, this)">&#10229;</button>
+                        <div class="detailed-info">
+                            <h4>Description</h4>
+                            <p>A technical prototype focused on physics-based gameplay and 3D vector math. Developed
+                                during my initial steps with Unreal Engine to understand how the physics engine handles
+                                force and impulses.</p>
+
+                            <h4>Technical Highlights</h4>
+                            <ul>
+                                <li><strong>Dynamic Impulses:</strong> Implementation of projectile physics using C++ to
+                                    apply specific forces based on player input.</li>
+                                <li><strong>Collision Matrix:</strong> Set up custom collision channels to handle
+                                    interactions between projectiles and construction-site props.</li>
+                            </ul>
+
+                            <h4>Gameplay Preview</h4>
+                            <p><em>[Video demonstrating physics interactions and projectile logic]</em></p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="card" onclick="expandCard(this)">
+                    <div class="card-header">
+                        <div class="project-badge">Learning Prototype</div>
+                        <h3>Obstacle Assault</h3>
+                        <span>C++ | Blueprints | UE5</span>
+                    </div>
+                    <div class="card-content">
+                        <button class="close-button" onclick="closeCard(event, this)">&#10229;</button>
+                        <div class="detailed-info">
+                            <h4>The Beginning of the Journey</h4>
+                            <p>
+                                The main objective of this project was to explore the engine's architecture and the
+                                transition
+                                from pure programming logic to real-time game development. To complete this project, I
+                                followed
+                                the lessons from the "Unreal Engine 5++ Game Development" course by the GameDev.tv Team
+                                on Udemy.com.
+
+                            </p>
+
+                            <h4>Technical Exploration</h4>
+                            <ul>
+                                <li><strong>C++ Class Creation:</strong> Learning the Unreal Engine class structure
+                                    (Actors and Components)
+                                    and how the code communicates with the editor.</li>
+                                <li><strong>The Tick Function & Movement:</strong> Study of the Tick component
+                                    to create constant motion, applying Delta Time concepts
+                                    to ensure that obstacles move at the same speed on any computer.
+                                </li>
+                                <li><strong>Physics & Math:</strong> Study of speed, direction and vectors for the
+                                    positioning of mobile platforms.</li>
+                                <li><strong>Blueprints Integration:</strong> Introduction to the Unreal visual system
+                                    for exposing C++ variables (EditAnywhere) and allowing quick adjustments in the
+                                    editor.
+                                </li>
+                            </ul>
+
+                            <h4>Level Design & Assets</h4>
+                            <p>
+                                Beginning of the Level Design study, focusing on the rhythm of the obstacles and
+                                on the progressive challenge. I used free assets to build the environment, focusing my
+                                energy on the backend logic and the functionality of the traps.
+                            </p>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
