@@ -311,18 +311,30 @@ body {
 
 @media (max-width: 768px) {
     .horizontal-track {
-        padding-left: 20px;
-        padding-right: 20px;
-        gap: 15px;
-        scroll-padding: 20px;
+        padding-left: 0;
+        padding-right: 0;
+        gap: 20px;
+        scroll-padding: 20px; 
         display: flex;
         overflow-x: auto;
         scroll-snap-type: x mandatory;
         -webkit-overflow-scrolling: touch;
     }
 
+    .horizontal-track::before,
+    .horizontal-track::after {
+        content: '';
+        width: 20px;
+        flex-shrink: 0;
+    }
+
     .card {
-        min-width: 80vw;
-        scroll-snap-align: center;
+        min-width: 75vw;
+        height: 480px;
+        scroll-snap-align: start;
+    }
+
+    .hero h1 {
+        font-size: 3.5rem;
     }
 }
