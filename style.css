@@ -28,7 +28,6 @@ body {
   overflow: hidden;
 }
 
-/* Hero Section */
 .hero {
     display: flex;
     flex-direction: column;
@@ -52,7 +51,6 @@ body {
     font-size: 1.2rem;
 }
 
-/* Container de Projetos */
 .projects-carousel {
     display: flex;
     align-items: center;
@@ -96,17 +94,15 @@ body {
 
 .card.expanded {
     width: 85vw;
-    height: 85vh;
+    height: 100vh;
     z-index: 10;
     cursor: default;
 }
 
-/* Esconde o vídeo quando expandido para usar o espaço todo para o texto */
 .card.expanded .card-preview {
     display: none !important;
 }
 
-/* Header Fixo no Topo quando expandido */
 .card-header {
     position: absolute;
     bottom: 0;
@@ -118,14 +114,14 @@ body {
 }
 
 .card.expanded .card-header {
-    position: sticky; /* Mantém o título fixo no topo do card */
+    position: sticky;
     top: 0;
     left: 0;
     width: 100%;
-    background: #151515; /* Cor sólida para o texto não passar por trás das letras */
+    background: #151515; 
     padding: 30px 40px;
-    z-index: 10; /* Garante que fica sempre por cima do texto que sobe */
-    border-bottom: 1px solid var(--accent-color); /* Uma linha subtil para separar o título do texto */
+    z-index: 10; 
+    border-bottom: 1px solid var(--accent-color); 
     box-sizing: border-box;
 }
 
@@ -135,27 +131,25 @@ body {
     margin: 0;
 }
 
-/* Conteúdo usando o card todo */
 .card-content {
     display: none;
     padding: 40px;
     opacity: 0;
     transition: opacity 0.4s ease;
-    overflow-y: auto; /* Permite o texto correr */
-    flex: 1; /* Ocupa todo o espaço restante */
+    overflow-y: auto; 
+    flex: 1; 
 }
 
 .card.expanded .card-content {
     display: block;
     opacity: 1;
-    padding: 40px 40px 40px 40px; /* Padding equilibrado */
+    padding: 40px 40px 40px 40px; 
     overflow-y: auto;
     flex: 1;
     -webkit-user-select: text;
     user-select: text;
 }
 
-/* Melhorando a barra de scroll interna */
 .card-content::-webkit-scrollbar {
     width: 8px;
 }
@@ -164,7 +158,6 @@ body {
     border-radius: 10px;
 }
 
-/* Estilo do Texto */
 .detailed-info h4 {
     color: var(--accent-color);
     margin-top: 20px;
@@ -180,7 +173,7 @@ body {
     padding-left: 20px; 
 }
 
-/* Garante que a imagem preencha o card sem esticar */
+
 .card-preview img {
     width: 100%;
     height: 100%;
@@ -188,7 +181,14 @@ body {
     display: block;
 }
 
-/* Esconde a imagem quando o card de perfil expande para dar lugar ao texto */
+.card-preview video {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    display: block;
+    background-color: #000; 
+}
+
 .card.expanded .card-preview img {
     display: none;
 }
@@ -215,28 +215,28 @@ body {
 }
 
 .gif-container {
-    margin-top: auto; /* Truque mágico: empurra este elemento para o fundo da div flex */
+    margin-top: auto;
     padding-top: 30px;
     display: flex;
-    justify-content: flex-end; /* Alinha o GIF à direita. Se quiseres ao centro, usa 'center' */
+    justify-content: flex-end; 
 }
 
 .footer-gif {
-    width: 120px; /* Ajusta o tamanho como preferires */
+    width: 120px;
     border-radius: 10px;
-    opacity: 0.8; /* Um pouco de transparência para não distrair muito */
+    opacity: 0.8; 
     transition: opacity 0.3s;
 }
 
 .footer-gif:hover {
-    opacity: 1; /* Brilha quando passas o rato */
+    opacity: 1; 
 }
 
 .social-links, .repo-link {
     margin: 20px 0;
     display: flex;
-    gap: 15px; /* Espaço maior entre os botões */
-    flex-wrap: wrap; /* Garante que em ecrãs pequenos eles não saiam do card */
+    gap: 15px; 
+    flex-wrap: wrap; 
 }
 
 .social-button, .git-repo-button {
@@ -271,6 +271,8 @@ body {
     margin-bottom: 5px;
     border-radius: 3px;
     text-transform: uppercase;
+    white-space: normal; 
+    max-width: fit-content;
 }
 
 .close-button {
