@@ -1,31 +1,31 @@
 :root {
-  --bg-color: #0a0a0a;
-  --accent-color: #00ff88;
-  --text-main: #ffffff;
+    --bg-color: #0a0a0a;
+    --accent-color: #00ff88;
+    --text-main: #ffffff;
 }
 
 body {
-  margin: 0;
-  font-family: 'Inter', sans-serif;
-  background: var(--bg-color);
-  color: var(--text-main);
-  overflow: hidden;
+    margin: 0;
+    font-family: 'Inter', sans-serif;
+    background: var(--bg-color);
+    color: var(--text-main);
+    overflow: hidden;
 }
 
 .container {
-  height: 100vh;
-  overflow-y: scroll;
-  scroll-snap-type: y mandatory;
-  scroll-behavior: smooth;
+    height: 100vh;
+    overflow-y: scroll;
+    scroll-snap-type: y mandatory;
+    scroll-behavior: smooth;
 }
 
 .panel {
-  height: 100vh;
-  width: 100%;
-  display: flex;
-  position: relative;
-  scroll-snap-align: start;
-  overflow: hidden;
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    position: relative;
+    scroll-snap-align: start;
+    overflow: hidden;
 }
 
 .hero {
@@ -38,10 +38,10 @@ body {
 }
 
 .hero h1 {
-  font-size: 5rem;
-  font-weight: 900;
-  margin: 0;
-  letter-spacing: -2px;
+    font-size: 5rem;
+    font-weight: 900;
+    margin: 0;
+    letter-spacing: -2px;
 }
 
 .subtitle {
@@ -108,7 +108,7 @@ body {
     bottom: 0;
     width: 100%;
     padding: 20px;
-    background: linear-gradient(transparent, rgba(0,0,0,0.9));
+    background: linear-gradient(transparent, rgba(0, 0, 0, 0.9));
     box-sizing: border-box;
     z-index: 5;
 }
@@ -118,10 +118,10 @@ body {
     top: 0;
     left: 0;
     width: 100%;
-    background: #151515; 
+    background: #151515;
     padding: 30px 40px;
-    z-index: 10; 
-    border-bottom: 1px solid var(--accent-color); 
+    z-index: 10;
+    border-bottom: 1px solid var(--accent-color);
     box-sizing: border-box;
 }
 
@@ -136,14 +136,14 @@ body {
     padding: 40px;
     opacity: 0;
     transition: opacity 0.4s ease;
-    overflow-y: auto; 
-    flex: 1; 
+    overflow-y: auto;
+    flex: 1;
 }
 
 .card.expanded .card-content {
     display: block;
     opacity: 1;
-    padding: 40px 40px 40px 40px; 
+    padding: 40px 40px 40px 40px;
     overflow-y: auto;
     flex: 1;
     -webkit-user-select: text;
@@ -153,6 +153,7 @@ body {
 .card-content::-webkit-scrollbar {
     width: 8px;
 }
+
 .card-content::-webkit-scrollbar-thumb {
     background: var(--accent-color);
     border-radius: 10px;
@@ -170,7 +171,7 @@ body {
 }
 
 .detailed-info ul {
-    padding-left: 20px; 
+    padding-left: 20px;
 }
 
 
@@ -186,7 +187,7 @@ body {
     height: 100%;
     object-fit: contain;
     display: block;
-    background-color: #000; 
+    background-color: #000;
 }
 
 .card.expanded .card-preview img {
@@ -218,28 +219,30 @@ body {
     margin-top: auto;
     padding-top: 30px;
     display: flex;
-    justify-content: flex-end; 
+    justify-content: flex-end;
 }
 
 .footer-gif {
     width: 120px;
     border-radius: 10px;
-    opacity: 0.8; 
+    opacity: 0.8;
     transition: opacity 0.3s;
 }
 
 .footer-gif:hover {
-    opacity: 1; 
+    opacity: 1;
 }
 
-.social-links, .repo-link {
+.social-links,
+.repo-link {
     margin: 20px 0;
     display: flex;
-    gap: 15px; 
-    flex-wrap: wrap; 
+    gap: 15px;
+    flex-wrap: wrap;
 }
 
-.social-button, .git-repo-button {
+.social-button,
+.git-repo-button {
     display: inline-block;
     width: fit-content;
     padding: 12px 25px;
@@ -255,7 +258,8 @@ body {
     cursor: pointer;
 }
 
-.social-button:hover, .git-repo-button:hover {
+.social-button:hover,
+.git-repo-button:hover {
     background: var(--accent-color);
     color: #000;
     box-shadow: 0 0 15px var(--accent-color);
@@ -271,7 +275,7 @@ body {
     margin-bottom: 5px;
     border-radius: 3px;
     text-transform: uppercase;
-    white-space: normal; 
+    white-space: normal;
     max-width: fit-content;
 }
 
@@ -303,4 +307,22 @@ body {
 
 .card:not(.expanded) .close-button {
     display: none;
+}
+
+@media (max-width: 768px) {
+    .horizontal-track {
+        padding-left: 20px;
+        padding-right: 20px;
+        gap: 15px;
+        scroll-padding: 20px;
+        display: flex;
+        overflow-x: auto;
+        scroll-snap-type: x mandatory;
+        -webkit-overflow-scrolling: touch;
+    }
+
+    .card {
+        min-width: 80vw;
+        scroll-snap-align: center;
+    }
 }
